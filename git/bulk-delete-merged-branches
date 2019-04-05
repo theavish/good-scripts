@@ -1,1 +1,2 @@
+# delete merged branches, preserving "master", "develop", and "staging"
 git branch --merged | grep -v "\*" | grep -Ev "(\*|master|develop|staging)" | xargs -n 1 git branch -d
